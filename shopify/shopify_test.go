@@ -1,5 +1,6 @@
 package shopify
 
+// Import Testing frameworks needed
 import (
 	"testing"
 	"fmt"
@@ -8,23 +9,27 @@ import (
 	"encoding/json"
 )
 
+// Create out store variables for easy access
 const (
 	store  = "your-store-domain-name-here"
 	apiKey = "your-api-key-here"
 	pass   = "your-secret-pass-here"
 )
 
+// We declare out shop here just to reuse
+// it later on.
 var shop = New(store, apiKey, pass)
 var objIdToDelete int64
 
+// Should create a new Store.
 func TestNew(t *testing.T) {
-
 
 	if shop.store != store || shop.apiKey != apiKey || shop.pass != pass {
 		t.Errorf("Error creating client, was suppposed to have store:$v apiKey:$v pass:$v", store, apiKey, pass)
 	}
 }
 
+// Should make a new Request
 func TestRequest(t *testing.T) {
 
 	result, error := shop.Request("GET", "products", nil)
@@ -33,7 +38,7 @@ func TestRequest(t *testing.T) {
 	assert.T(t, result != nil, "shouldnt be null")
 }
 
-
+// Should make a new Get Request
 func TestGet(t *testing.T) {
 
 	products, errors := shop.Get("products/350748043/variants/819701439")
@@ -56,6 +61,7 @@ func TestGet(t *testing.T) {
 
 }
 
+// Should make a new Post Request
 func TestPost(t *testing.T) {
 
 	str := ` {"product": {"title": "MyProduct","body_html": "<strong>Good snowboard!</strong>","vendor": "Burton","product_type": "Snowboard","variants": [  {	"option1": "First",	"price": "10.00",	"sku": 123  },  {	"option1": "Second",	"price": "20.00",	"sku": "123"  }]}}  `
@@ -80,13 +86,14 @@ func TestPost(t *testing.T) {
 	objIdToDelete = id
 }
 
+// Should make a new Put Request
 func TestPut(t *testing.T) {
 
 	str := ` {"product": {"title": "Edited" } } `
 	var data map[string]interface{}
 	json.Unmarshal([]byte(str), &data)
 
-	endpoint := fmt.Sprintf("products/%v",objIdToDelete)
+	endpoint := fmt.Sprintf("products/%v", objIdToDelete)
 	result, errors := shop.Put(endpoint, data)
 
 	js, err := simplejson.NewJson(result)
@@ -102,10 +109,10 @@ func TestPut(t *testing.T) {
 	assert.T(t, title == "Edited")
 }
 
-
+// Should make a new Delete Request
 func TestDelete(t *testing.T) {
 
-	endpoint := fmt.Sprintf("products/%v",objIdToDelete)
+	endpoint := fmt.Sprintf("products/%v", objIdToDelete)
 	result, error := shop.Delete(endpoint)
 
 	assert.T(t, error == nil, "should be null")

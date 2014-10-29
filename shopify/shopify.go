@@ -1,17 +1,22 @@
+// Package shopify:
+// go-shopify provides an easy-to-use API
+// for making CRUD request to shopify.
 package shopify
 
 import (
 	"fmt"
-	//	"io/ioutil"
-	//	"net/http"
-	//	Url "net/url"
 	"encoding/json"
 	"github.com/parnurzeal/gorequest"
 )
 
+// Shopify store struct which we use
+// to wrap our request operations.
 type Shopify struct {
+	// Store domain-name
 	store    string
+	// Store API key
 	apiKey   string
+	// Store password
 	pass     string
 }
 
