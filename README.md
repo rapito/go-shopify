@@ -12,6 +12,8 @@ go get github.com/rapito/go-shopify
 How-to-use
 ----------
 
+- godoc: [![GoDoc](https://godoc.org/github.com/rapito/go-shopify/shopify?status.svg)](https://godoc.org/github.com/rapito/go-shopify/shopify)
+
 - Get Requests
 
 ```
