@@ -56,5 +56,10 @@ Check them out, hopefully they'll do the same for you:
  
  - http://github.com/parnurzeal/gorequest
  - http://github.com/bmizerany/assert
- - http://github.com/bitly/go-simplejson
-
+ - http://github.com/avelino/awesome-go
+ 
+ Other APIs
+ ----------
+ 
+ - http://github.com/rapito/go-shopify
+ 
