@@ -61,5 +61,5 @@ Check them out, hopefully they'll do the same for you:
  Other APIs
  ----------
  
- - http://github.com/rapito/go-shopify
+ - http://github.com/rapito/go-spotify
  
