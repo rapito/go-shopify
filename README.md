@@ -1,7 +1,7 @@
 go-shopify
 ==========
 
-[![GoDoc](https://godoc.org/github.com/rapito/go-shopify/shopify?status.svg)](https://godoc.org/github.com/rapito/go-shopify/shopify)
+[![GoDoc](https://godoc.org/github.com/rapito/go-shopify/shopify?status.svg)](https://godoc.org/github.com/rapito/go-shopify/shopify)  [![baby-gopher](https://raw.github.com/drnic/babygopher-site/gh-pages/images/babygopher-logo-small.png)](http://www.babygopher.org)
 
 Simple API made with **go** to make **CRUD** request to your **Shopify Store**.
 
