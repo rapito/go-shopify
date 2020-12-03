@@ -47,6 +47,10 @@ library. Which inspired me to start creating this one.
 
 - Fork it at: [go-shopify](https://github.com/hammond-bones/go-shopify)
 
+Buy me a Drink
+-------------
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=FFC6KNAX9SKZU)
+
 Links
 -----
 
